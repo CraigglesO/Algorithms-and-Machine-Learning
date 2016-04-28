@@ -78,7 +78,11 @@ Developed By
 
 Craig O'Connor (oconnorct1@gmail.com)
 
-    Born into a Navy family. Traveled my whole life. Graduated with a BS in engineering. Traveled all over America for my job, than some more in Asia. Passionate in whatever I apply myself to. I love the writings of Edger Allen Poe and David Mitchell. I love to discover, and challenge myself simultaneously. My hobbies include rock climbing, mountaineering, snowboarding, motorcycles, art (black and white/pastels), etc.
+    Born into a Navy family. Traveled my whole life. Graduated with a BS in engineering. 
+    Traveled all over America for my job, than some more in Asia. Passionate in whatever 
+    I apply myself to. I love the writings of Edger Allen Poe and David Mitchell. I love 
+    to discover, and challenge myself simultaneously. My hobbies include rock climbing, 
+    mountaineering, snowboarding, motorcycles, art (black and white/pastels), etc.
 
 * [HackerRank Profile] (https://www.hackerrank.com/oconnorct1)
 * [LinkedIn Profile] (https://www.linkedin.com/in/craig-o-connor-333b81a9)
@@ -88,7 +92,7 @@ Craig O'Connor (oconnorct1@gmail.com)
 
 
 
-
+```bash
 tree representation of file system:
 ├── AmortizedAnalysis
 ├── Analysis
@@ -125,3 +129,4 @@ tree representation of file system:
 │   ├── Radixsort
 │   └── Timsort
 └── vanEmdeBoasTrees
+```
