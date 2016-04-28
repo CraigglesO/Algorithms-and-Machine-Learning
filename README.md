@@ -65,3 +65,8 @@ Problems
 * [Radixsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Radixsort)
 * [Timsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Timsort)
 
+
+Developed By
+------------
+
+Craig O'Connor (oconnorct1@gmail.com)
