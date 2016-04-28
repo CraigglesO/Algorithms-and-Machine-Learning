@@ -32,10 +32,10 @@ Psuedo Code
 
 About
 --------
-
+```clojure
 | stable? | inplace? | running time | extra space |
 |      no |      yes |    O(N lg N) |        lg N |
-
+```
 
 
 Quicksort is the fastest general-purpose sort.
