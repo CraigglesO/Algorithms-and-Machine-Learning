@@ -1,7 +1,10 @@
 # Algorithm Design
 
+
+```bash
+
                             .---.         ,,
-                 ,,        /     \       ;,,'
+                 ,,        /     \       ;,,'   TREE REPRESENTATION:
                 ;, ;      (  o  o )      ; ;
                   ;,';,,,  \  \/ /      ,; ;
                ,,,  ;,,,,;;,`   '-,;'''',,,'
@@ -9,6 +12,45 @@
                  ;,,,;    ~~'  '';,,''',,;''''  
                                     '''
                                     
+
+
+├── AmortizedAnalysis
+├── Analysis
+├── ApproximationAlgorithms
+│   ├── Subset-SumProblem
+│   └── Traveling-SalesmanProblem
+├── AugmentingDataStructures
+├── B-Trees
+├── Benchmarks
+├── BinarySearchTrees
+├── DisjointSets
+├── DynamicProgramming
+├── FibonacciHeaps
+├── GraphAlgorithms
+│   ├── All-PairsShortestPaths
+│   ├── MaximumFlow
+│   ├── MinimumSpanningTrees
+│   └── Single-SourceShortestPaths
+├── GreedyAlgorithms
+├── HashTables
+├── LICENSE
+├── MultithreadedAlgorithms
+├── NP-Completeness
+├── Probabilistic
+├── README.md
+├── RedBlackTrees
+├── Sorting
+│   ├── Bucket
+│   ├── Bucketsort
+│   ├── Heapsort
+│   ├── Insertionsort
+│   ├── Quicksort
+│   │   └── about.txt
+│   ├── Radixsort
+│   └── Timsort
+└── vanEmdeBoasTrees
+```
+
 Implementations of different famous Computer Science algorithms.
 ===============
 
@@ -90,43 +132,3 @@ Craig O'Connor (oconnorct1@gmail.com)
 
 
 
-
-
-```bash
-tree representation of file system:
-├── AmortizedAnalysis
-├── Analysis
-├── ApproximationAlgorithms
-│   ├── Subset-SumProblem
-│   └── Traveling-SalesmanProblem
-├── AugmentingDataStructures
-├── B-Trees
-├── Benchmarks
-├── BinarySearchTrees
-├── DisjointSets
-├── DynamicProgramming
-├── FibonacciHeaps
-├── GraphAlgorithms
-│   ├── All-PairsShortestPaths
-│   ├── MaximumFlow
-│   ├── MinimumSpanningTrees
-│   └── Single-SourceShortestPaths
-├── GreedyAlgorithms
-├── HashTables
-├── LICENSE
-├── MultithreadedAlgorithms
-├── NP-Completeness
-├── Probabilistic
-├── README.md
-├── RedBlackTrees
-├── Sorting
-│   ├── Bucket
-│   ├── Bucketsort
-│   ├── Heapsort
-│   ├── Insertionsort
-│   ├── Quicksort
-│   │   └── about.txt
-│   ├── Radixsort
-│   └── Timsort
-└── vanEmdeBoasTrees
-```
