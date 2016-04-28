@@ -51,8 +51,10 @@
 └── vanEmdeBoasTrees
 ```
 
-Implementations of different famous Computer Science algorithms.
+About
 ===============
+
+Lorum Ipsum. Different implementations of Algorithms.
 
 
 Problems
