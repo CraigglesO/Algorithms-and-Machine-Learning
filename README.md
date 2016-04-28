@@ -111,6 +111,11 @@ Problems
 * [Quicksort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Quicksort)
 * [Radixsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Radixsort)
 * [Timsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Timsort)
+* [OddEvensort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/OddEvensort)
+* [Bubblesort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Bubblesort)
+* [Countingsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Countingsort)
+* [LSD] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/LSD)
+* [Mergesort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Mergesort)
 
 
 
