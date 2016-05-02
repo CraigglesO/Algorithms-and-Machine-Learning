@@ -153,6 +153,9 @@ Craig O'Connor (oconnorct1@gmail.com)
 * [HackerRank Profile] (https://www.hackerrank.com/oconnorct1)
 * [LinkedIn Profile] (https://www.linkedin.com/in/craig-o-connor-333b81a9)
 
+Ayush Anand (iamayushanand@gmail.com)
+
+* [HackerRank Profile] (https://www.hackerrank.com/FanOfTourist)
 
 
 
