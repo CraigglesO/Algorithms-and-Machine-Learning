@@ -1,10 +1,22 @@
+/*
+ * Written by Craig Travis O'Connor 2016
+ * oconnorct1@gmail.com
+ *
+ * Fibonacci Heap - Data Structure
+ * This algorithm is complex, but makes up for it with it's speed
+ *
+ *
+ *
+ */
+
 /**
- * Description
+ * Description: Creates a Fibonacci heap
+ * @constructor
  * @method fibonacciHeap
  * @return 
  */
 var fibonacciHeap = function(){
-   this.min = undefined;
+   this.root = undefined;
    this.n = 0;
 };
 
@@ -14,13 +26,12 @@ fibonacciHeap.prototype = {
     * Description
     * @method insert
     * @param {} key
-    * @return node
+    * @return
     */
-   insert: function(key){
-      var node = new Node(key);
-      this.min = mergeList(this.min, node)
+   insert: function(key,value){
+      var node = new Node(key,value);
+      this.root = mergeList(this.root, node)
       this.n++;
-      return node;
    },
 
    /**
@@ -30,21 +41,23 @@ fibonacciHeap.prototype = {
     * @param {} H2
     * @return 
     */
-   union: function(H1,H2){
-
+   union: function(tree){
+    this.root = mergeList(this.root,tree.root);
+    this.n += tree.n;
    },
 
    /**
     * Description
-    * @method extractMin
+    * @method extractroot
     * @return MemberExpression
     */
    extractMin: function(){
-      var z = this.min;
+      var z = this.root;
       if (z){
          if (z.child){
             var child = z.child;
             do {
+              //add child to rootlist
                child.parent = undefined;
                child = child.right;
             } while (child !== z.child);
@@ -55,15 +68,14 @@ fibonacciHeap.prototype = {
             nextNode = z.right;
          }
          removeNode(z);
-         this.n--;
-
-         this.min = mergeList(nextNode, z.child);
+         this.root = mergeList(nextNode, z.child);
          if (nextNode){
-            this.min = nextNode;
-            this.min = consolidate(this.min);
+            this.root = nextNode;
+            this.root = consolidate(this.root);
          }
       }
-      return z.key;
+      this.n--;
+      return z;
    },
 
    /**
@@ -71,26 +83,17 @@ fibonacciHeap.prototype = {
     * @method decreaseKey
     * @return 
     */
-   decreaseKey: function(){
-
-   },
-
-   /**
-    * Description
-    * @method cut
-    * @return 
-    */
-   cut: function(){
-
-   },
-
-   /**
-    * Description
-    * @method cascadingCut
-    * @return 
-    */
-   cascadingCut: function(){
-
+   decreaseKey: function(node,nKey){
+    if (nkey > node.key)
+      return console.error('new key is greater than current key');
+    node.key = nKey;
+    var y = node.parent;
+    if (y && node.key < y.key){
+      cut(node,y,this.root);
+      cascadingCut(y,this.root);
+    }
+    if (node.key < this.root.key)
+      this.root = node;
    },
 
    /**
@@ -99,7 +102,9 @@ fibonacciHeap.prototype = {
     * @param {} z
     * @return 
     */
-   delete: function(z){
+   clear: function(z){
+    this.root = undefined;
+    this.n = 0;
    },
 
    /**
@@ -114,39 +119,6 @@ fibonacciHeap.prototype = {
         : this.fib(n - 1) + this.fib(n - 2);
    }
 
-};
-
-/**
- * Description
- * @method nodeListIterator
- * @param {} start
- * @return 
- */
-var nodeListIterator = function (start){
-   this.items = [];
-   var current = start;
-   do {
-      this.items.push(current);
-      current = current.right;
-   } while (start !== current);
-}
-
-/**
- * @private
- * @method hasNext
- * @return BinaryExpression
- */
-nodeListIterator.prototype.hasNext = function () {
-  return this.items.length > 0;
-};
-
-/**
- * @private
- * @method next
- * @return CallExpression
- */
-nodeListIterator.prototype.next = function () {
-  return this.items.shift();
 };
 
 /**
@@ -173,7 +145,7 @@ function mergeList(a, b){
    b.right = temp;
    b.right.left = b;
 
-   return compare(a, b) < 0 ? a : b;
+   return (a.key < b.key) ? a : b;
 }
 
 /**
@@ -194,79 +166,108 @@ function removeNode(node){
 /**
  * Description
  * @method consolidate
- * @param {} minNode
- * @return minNode
+ * @param {} rootNode
+ * @return rootNode
  */
-function consolidate(minNode){
+function consolidate(rootNode){
    var A = [];
-   var it = new nodeListIterator(minNode);
-   while (it.hasNext()){
-      var current = it.next();
+   
+   //setup all root nodes for review
+   var iter = [];
+   var t = 0;
+   var current = rootNode;
+   do {
+      iter.push(current);
+      current = current.right;
+   } while (rootNode !== current);
 
-    // If there exists another node with the same degree, merge them
-    while (A[current.degree]) {
-      if (compare(current, A[current.degree]) > 0) {
-        var temp = current;
-        current = A[current.degree];
-        A[current.degree] = temp;
+   do {
+    var y = iter[t];
+    deg = y.degree;
+    while(A[deg]){
+      if (y.key > A[deg].key){
+        var temp = y;
+        y = A[deg];
+        A[deg] = temp;
       }
-      linkHeaps(A[current.degree], current, compare);
-      A[current.degree] = undefined;
-      current.degree++;
+      link(A[deg],y);
+      A[deg] = undefined;
     }
+    A[deg] = y;
+    t++;
+   } while(iter[t]);
 
-    A[current.degree] = current;
+   rootNode = undefined;
+   for (var i = 0; i < A.length; i++){
+    if (A[i]){
+      A[i].right = A[i];
+      A[i].left = A[i];
+      rootNode = mergeList(rootNode,A[i]);
+    }
    }
-   return minNode;
+
+   return rootNode;
 }
 
 /**
  * Description
  * @method linkHeaps
  * @param {} max
- * @param {} min
+ * @param {} root
  * @param {} compare
  * @return 
  */
-function linkHeaps(max, min, compare) {
+function link(max, rootNode){
   removeNode(max);
-  min.child = mergeList(max, min.child, compare);
-  max.parent = min;
-  max.isMarked = false;
+  rootNode.child = mergeList(max, rootNode.child);
+  max.parent = rootNode;
+  rootNode.degree++;
+  max.mark = false;
+}
+
+function cut(node, parent, rootNode){
+  parent.degree--;
+  if (node.next === node)
+    parent.child = undefined;
+  else 
+    parent.child = node.next;
+  removeNode(node);
+  rootNode = mergeList(rootNode,node);
+  node.mark = false;
+
+  return rootNode
+}
+
+function cascadingCut(node, rootNode){
+  var z = node.parent;
+  if (z){
+    if (!y.mark)
+      y.mark = true;
+    else{
+      rootNode = cut(node, z, rootNode);
+      rootNode = cascadingCut(z,rootNode);
+    }
+  }
+
+  return rootNode
 }
 
 /**
- * Description
- * @method compare
- * @param {} a
- * @param {} b
- * @return Literal
- */
-function compare(a,b){
-      if (a.key > b.key){
-         return 1;
-      }
-      if (a.key < b.key){
-         return -1;
-      }
-      return 0;
-   }
-
-/**
- * Description
+ * Description: Node object
+ * @constructor
  * @method Node
  * @param {} key
  * @return 
  */
-function Node(key) {
+function Node(key,value){
   this.key = key;
+  this.value = value;
   this.left = this;
   this.right = this;
   this.degree = 0;
-
   this.parent = undefined;
   this.child = undefined;
-  this.isMarked = undefined;
+  this.mark = undefined;
 }
 
 module.exports = fibonacciHeap;
