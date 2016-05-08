@@ -13,7 +13,7 @@
                                     '''
                                     
 
-
+.
 ├── AmortizedAnalysis
 ├── Analysis
 ├── ApproximationAlgorithms
@@ -22,15 +22,41 @@
 ├── AugmentingDataStructures
 ├── B-Trees
 ├── Benchmarks
-├── BinarySearchTrees
+├── DataStructures
+│   ├── BinaryHeap
+│   │   ├── binaryHeap.js
+│   │   ├── index.js
+│   │   └── text.txt
+│   ├── BinarySearchTree
+│   │   ├── binarySearchTree.js
+│   │   ├── index.js
+│   │   └── text.txt
+│   ├── FibonacciHeap
+│   │   ├── fibonacciHeap.js
+│   │   ├── index.js
+│   │   └── text.txt
+│   ├── RedBlackTree
+│   │   ├── RedBlackTree.js
+│   │   ├── index.js
+│   │   └── text.txt
+│   └── vanEmdeBoasTrees
 ├── DisjointSets
 ├── DynamicProgramming
-├── FibonacciHeaps
 ├── GraphAlgorithms
 │   ├── All-PairsShortestPaths
+│   │   ├── FloydWarshall.js
+│   │   └── README.md
 │   ├── MaximumFlow
 │   ├── MinimumSpanningTrees
+│   │   ├── Kruskal.js
+│   │   ├── PrimMST.js
+│   │   ├── README.md
+│   │   ├── text.txt
+│   │   └── text2.txt
 │   └── Single-SourceShortestPaths
+│       ├── Dijkstra.js
+│       ├── README.md
+│       └── text.txt
 ├── GreedyAlgorithms
 ├── HashTables
 ├── LICENSE
@@ -38,20 +64,24 @@
 ├── NP-Completeness
 ├── Probabilistic
 ├── README.md
-├── RedBlackTrees
-├── Sorting
-│   ├── Bucket
-│   ├── Bucketsort
-│   ├── Heapsort
-│   ├── Insertionsort
-│   ├── Quicksort
-│   │   ├── README.md
-│   │   ├── about.txt
-│   │   ├── quicksort.java
-│   │   └── quicksort.js
-│   ├── Radixsort
-│   └── Timsort
-└── vanEmdeBoasTrees
+└── Sorting
+    ├── Bubblesort
+    ├── Bucketsort
+    ├── Countingsort
+    ├── Heapsort
+    │   ├── README.md
+    │   └── heapsort.js
+    ├── Insertionsort
+    ├── LSD
+    ├── Mergesort
+    ├── OddEvensort
+    ├── Quicksort
+    │   ├── README.md
+    │   ├── quicksort.java
+    │   └── quicksort.js
+    ├── Radixsort
+    ├── Shellsort
+    └── Timsort
 ```
 
 About
@@ -77,13 +107,16 @@ Problems
 
 ### Benchmarks
 
-### BinarySearchTrees
+### DataStructures
+* [Binary-Heap] (https://github.com/CraigglesO/Algorithm_Design/tree/master/DataStructures/BinaryHeap)
+* [Binary-Search-Tree] (https://github.com/CraigglesO/Algorithm_Design/tree/master/DataStructures/BinarySearchTree)
+* [Fibonacci-Heap] (https://github.com/CraigglesO/Algorithm_Design/tree/master/DataStructures/FibonacciHeap)
+* [Red-Black-Tree] (https://github.com/CraigglesO/Algorithm_Design/tree/master/DataStructures/RedBlackTree)
+* [van-Emde-Boas-Trees] (https://github.com/CraigglesO/Algorithm_Design/tree/master/DataStructures/vanEmdeBoasTrees)
 
 ### DisjointSets
 
 ### DynamicProgramming
-
-### FibonacciHeaps
 
 ### GraphAlgorithms
 * [All-PairsShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/All-PairsShortestPaths)
@@ -100,8 +133,6 @@ Problems
 ### NP-Completeness
 
 ### Probabilistic
-
-### RedBlackTrees
 
 ### Sorting
 * [Bucket] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Bucket)
@@ -152,10 +183,6 @@ Craig O'Connor (oconnorct1@gmail.com)
 
 * [HackerRank Profile] (https://www.hackerrank.com/oconnorct1)
 * [LinkedIn Profile] (https://www.linkedin.com/in/craig-o-connor-333b81a9)
-
-Ayush Anand (iamayushanand@gmail.com)
-
-* [HackerRank Profile] (https://www.hackerrank.com/FanOfTourist)
 
 
 
