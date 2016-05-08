@@ -7,7 +7,7 @@ Psuedo Code
                  _-====-__-======-__-========-_____-============-__
                _(           Minimum Spanning Trees                _)
             OO(                                                   )_
-           0  (_                   Prim                            _)
+           0  (_                   Prim & Kruskal                  _)
          o0     (_                                                _)
         o         '=-___-===-_____-========-___________-===-dwb-='
       .o                                _________
@@ -19,7 +19,7 @@ Psuedo Code
       
       MST-PRIM(G,w,r)
 
-      1 for each u in G.V
+      1 for each u in set G.V
       2   u.key = inf
       3   u.parent = Nil
       4 r.key = 0
@@ -31,6 +31,17 @@ Psuedo Code
      10     v.parent = u
      11     v.key = w(u,v)
 
+     MST-KRUSKAL(G,w)
+
+     1 A = 0
+     2 for each vertex v in set G.V
+     3   MAKE-SET(v)
+     4 sort the edges of G.E in nondecreasing order by weight w
+     5 for each edge (u,v) in set G.E, taken in nondecreasing order by weight
+     6   if FIND-SET(u) != FIND-SET(v)
+     7   A = A ∪ {(u,v)}
+     8   UNION(u,v)
+     9 return A
 
 ```
 

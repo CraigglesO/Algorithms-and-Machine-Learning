@@ -118,7 +118,7 @@ Problems
 
 ### DynamicProgramming
 
-### GraphAlgorithms
+### GraphTheory
 * [All-PairsShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/All-PairsShortestPaths)
 * [MaximumFlow] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/MaximumFlow)
 * [MinimumSpanningTrees] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/MinimumSpanningTrees)
