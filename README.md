@@ -151,6 +151,11 @@ Problems
 
 ### Probabilistic
 
+### Searching
+*[Breadth-First-Search] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Searching/BreadthFirstSearch)
+*[Depth-First-Search] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Searching/DepthFirstSearch)
+*[Knuth-Morris-Pratt] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Searching/Knuth-Morris-Pratt)
+
 ### Sorting
 * [Bucket] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Bucket)
 * [Bucketsort] (https://github.com/CraigglesO/Algorithm_Design/tree/master/Sorting/Bucketsort)
