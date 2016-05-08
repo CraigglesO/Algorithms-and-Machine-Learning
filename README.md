@@ -154,10 +154,10 @@ Problems
 ### DynamicProgramming
 
 ### GraphTheory
-* [All-PairsShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/All-PairsShortestPaths)
-* [MaximumFlow] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/MaximumFlow)
-* [MinimumSpanningTrees] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/MinimumSpanningTrees)
-* [Single-SourceShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphAlgorithms/Single-SourceShortestPaths)
+* [All-PairsShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphTheory/All-PairsShortestPaths)
+* [MaximumFlow] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphTheory/MaximumFlow)
+* [MinimumSpanningTrees] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphTheory/MinimumSpanningTrees)
+* [Single-SourceShortestPaths] (https://github.com/CraigglesO/Algorithm_Design/tree/master/GraphTheory/Single-SourceShortestPaths)
 
 ### GreedyAlgorithms
 
