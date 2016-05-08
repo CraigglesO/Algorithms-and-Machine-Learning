@@ -41,25 +41,30 @@
 ├── Benchmarks
 ├── DataStructures
 │   ├── BinaryHeap
+│   │   ├── README.md
 │   │   ├── binaryHeap.js
 │   │   ├── index.js
 │   │   └── text.txt
 │   ├── BinarySearchTree
+│   │   ├── README.md
 │   │   ├── binarySearchTree.js
 │   │   ├── index.js
 │   │   └── text.txt
 │   ├── FibonacciHeap
+│   │   ├── README.md
 │   │   ├── fibonacciHeap.js
 │   │   ├── index.js
 │   │   └── text.txt
 │   ├── RedBlackTree
+│   │   ├── README.md
 │   │   ├── RedBlackTree.js
 │   │   ├── index.js
 │   │   └── text.txt
 │   └── vanEmdeBoasTrees
+│       └── README.md
 ├── DisjointSets
 ├── DynamicProgramming
-├── GraphAlgorithms
+├── GraphTheory
 │   ├── All-PairsShortestPaths
 │   │   ├── FloydWarshall.js
 │   │   └── README.md
@@ -71,6 +76,7 @@
 │   │   ├── text.txt
 │   │   └── text2.txt
 │   └── Single-SourceShortestPaths
+│       ├── BellmanFord.js
 │       ├── Dijkstra.js
 │       ├── README.md
 │       └── text.txt
@@ -81,6 +87,17 @@
 ├── NP-Completeness
 ├── Probabilistic
 ├── README.md
+├── Searching
+│   ├── BreadthFirstSearch
+│   │   ├── README.md
+│   │   ├── bfsShortReach.js
+│   │   └── text.txt
+│   ├── DepthFirstSearch
+│   │   ├── README.md
+│   │   ├── dfsShortReach.js
+│   │   └── text.txt
+│   └── Knuth-Morris-Pratt
+│       └── README.md
 └── Sorting
     ├── Bubblesort
     ├── Bucketsort
@@ -94,11 +111,12 @@
     ├── OddEvensort
     ├── Quicksort
     │   ├── README.md
-    │   ├── quicksort.java
     │   └── quicksort.js
     ├── Radixsort
     ├── Shellsort
     └── Timsort
+
+
 ```
 
 About
