@@ -98,17 +98,6 @@ fibonacciHeap.prototype = {
 
    /**
     * Description
-    * @method delete
-    * @param {} z
-    * @return 
-    */
-   clear: function(z){
-    this.root = undefined;
-    this.n = 0;
-   },
-
-   /**
-    * Description
     * @method fib
     * @param {} n
     * @return ConditionalExpression
@@ -129,15 +118,6 @@ fibonacciHeap.prototype = {
  * @return ConditionalExpression
  */
 function mergeList(a, b){
-   if (!a && !b){
-      return undefined;
-   }
-   if (!a){
-      return b;
-   }
-   if (!b){
-      return a;
-   }
 
    var temp = a.right;
    a.right = b.right;
