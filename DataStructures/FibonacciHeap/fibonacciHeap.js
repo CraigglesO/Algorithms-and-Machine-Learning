@@ -84,7 +84,7 @@ fibonacciHeap.prototype = {
     * @return 
     */
    decreaseKey: function(node,nKey){
-    if (nkey > node.key)
+    if (nKey > node.key)
       return console.error('new key is greater than current key');
     node.key = nKey;
     var y = node.parent;
@@ -118,6 +118,15 @@ fibonacciHeap.prototype = {
  * @return ConditionalExpression
  */
 function mergeList(a, b){
+  if (!a && !b) {
+    return undefined;
+  }
+  if (!a) {
+    return b;
+  }
+  if (!b) {
+    return a;
+  }
 
    var temp = a.right;
    a.right = b.right;
@@ -221,8 +230,8 @@ function cut(node, parent, rootNode){
 function cascadingCut(node, rootNode){
   var z = node.parent;
   if (z){
-    if (!y.mark)
-      y.mark = true;
+    if (!node.mark)
+      node.mark = true;
     else{
       rootNode = cut(node, z, rootNode);
       rootNode = cascadingCut(z,rootNode);

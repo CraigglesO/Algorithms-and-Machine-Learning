@@ -1,4 +1,4 @@
-var fib = require('./fibonacciHeap2');
+var fib = require('./fibonacciHeap');
 var fs = require('fs');
 
 
@@ -19,30 +19,31 @@ function main(data){
     data.forEach(function (x){
         fh.insert(x);
     });
-    console.log(fh.minNode);
+    //console.log(fh.root);
+    console.log(fh[0]);
     console.log();
     console.log();
     console.log();
     console.log();
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
-    console.log(fh.extractMinimum());
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    /*
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    console.log(fh.extractMin().key);
+    */
     console.log();
     console.log();
     console.log();
     console.log();
-    console.log(fh.minNode);
+    console.log(fh.root);
     //console.log(fh.extractMin());
 }
